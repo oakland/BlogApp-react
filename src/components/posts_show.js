@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchPost } from "../actions";
 
-class PostShow extends Component() {
+class PostsShow extends Component() {
 
 	componentDidMount() {
 		const { id } = this.props.match.params; // this is provided by react-router
@@ -33,4 +33,4 @@ function mapStateToProps({ posts }, ownProps) {
 	return { post: posts[ownProps.match.params.id] };
 }
 
-export default connect(mapStateToProps, {fetchPost})(PostShow);
+export default connect(mapStateToProps, {fetchPost})(PostsShow);
