@@ -14,7 +14,7 @@ class PostsIndex extends Component {
 		return _.map(this.props.posts, post => { // 这里的 props 对应的就是下面 mapStateToProps 函数中返回的对象，所以在这里的所有操作针对的都是 props，而不是 state
 			return (
 				<li className="list-group-item" key={post.id}>
-					<Link>
+					<Link to={`/posts/${post.id}`}>
 						{post.title}
 					</Link>
 				</li>
